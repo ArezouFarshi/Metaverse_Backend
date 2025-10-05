@@ -12,6 +12,7 @@ using Nethereum.ABI.FunctionEncoding.Attributes;
 using Nethereum.Contracts;
 using Nethereum.Hex.HexTypes;
 using System.Collections.Generic;
+using System.Numerics; 
 
 // DTO for the PanelEventAdded event (update parameter names/types if needed)
 [Event("PanelEventAdded")]
@@ -152,3 +153,4 @@ class Program
         await Task.WhenAll(StartWebSocketServer(), StartBlockchainListener());
     }
 }
+
