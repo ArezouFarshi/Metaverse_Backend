@@ -9,7 +9,6 @@ RUN dotnet publish MonaBackend-AF01.csproj -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app/publish .
-EXPOSE 5000
-ENV ASPNETCORE_URLS=http://+:5000
-ENTRYPOINT ["dotnet", "MonaBackendClean.dll"]
-
+EXPOSE 10000
+ENV ASPNETCORE_URLS=http://+:10000
+ENTRYPOINT ["dotnet", "MonaBackend-AF01.dll"]
