@@ -92,7 +92,7 @@ class Program
     static async Task StartBlockchainListener()
     {
         var infuraUrl = "https://sepolia.infura.io/v3/51bc36040f314e85bf103ff18c570993";
-        var contractAddress = "0xEA97f8c21A73864F8B920113E4A46a3E0CE4130F";
+        var contractAddress = "0x59B649856d8c5Fb6991d30a345f0b923eA91a3f7";
 
         var web3 = new Web3(infuraUrl);
 
@@ -153,4 +153,5 @@ class Program
         await Task.WhenAll(StartWebSocketServer(), StartBlockchainListener());
     }
 }
+
 
